@@ -206,6 +206,7 @@ public class AptHostedFacet
 
   private String buildReleaseFile(String distribution, Collection<String> architectures, String md5, String sha256) {
     Paragraph p = new Paragraph(Arrays.asList(
+        new ControlFile.ControlField("Origin", "BitBox USA"),
         new ControlFile.ControlField("Suite", distribution),
         new ControlFile.ControlField("Codename", distribution), new ControlFile.ControlField("Components", "main"),
         new ControlFile.ControlField("Date", DateUtils.formatDate(new Date())),
